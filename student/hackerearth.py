@@ -7,7 +7,7 @@ def hackerearth(headers, browser, he_user):
         problems = "No Account Provided/ Present"
     else:
         url = "https://www.hackerearth.com/login/"
-        driver = webdriver.Chrome(executable_path='/home/abhi/Desktop')
+        driver = webdriver.Chrome()
         driver.get(url)
 
         user = driver.find_element_by_id("id_login")

@@ -40,10 +40,11 @@ def delete_notifications():
             print(codechef1)
             spoj_count = spoj(headers, browser, spoj_user)
             codeforces1 = codeforces(headers, browser, cf_user)
+            hackerearth1 = hackerearth(headers,browser,he_user)
             # hackerearth1='344'
             # hackerearth(headers,browser,he_user)
             github1 = github(headers, browser, github_user)
 
             particularstudent = StudentDetails(
-                er_no=i, codeforces=codeforces1, codechef=codechef1, spoj=spoj_count, hackerearth="344", github=github1)
+                er_no=i, codeforces=codeforces1, codechef=codechef1, spoj=spoj_count, hackerearth=hackerearth1, github=github1)
             particularstudent.save()
