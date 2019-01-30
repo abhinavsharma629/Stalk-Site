@@ -20,7 +20,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'delete-every-5-seconds': {
         'task': 'update database',
-        'schedule': crontab(minute=00, hour=00),
+        'schedule': crontab(minute=59, hour=23),
         'args': (None)
     },
 }

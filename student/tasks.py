@@ -51,8 +51,6 @@ def delete_notifications():
                 hackerearth1 = hackerearth(headers, browser, he_user)
             else:
                 hackerearth1 = 0
-            # hackerearth1='344'
-            # hackerearth(headers,browser,he_user)
 
             if(len(github_user) != 0):
                 github1 = github(headers, browser, github_user)
