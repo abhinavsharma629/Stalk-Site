@@ -80,9 +80,11 @@ def number(request):
 
                 # User Details
                 obj1 = StudentDetails.objects.get(er_no=query)
+                obj = StudentData.objects.get(er_no=query)
+
                 codedict = obj1.codechef
 
-				#Extracting from the dict stored in the column
+                # Extracting from the dict stored in the column
                 code = []
                 s = ""
                 for i in codedict:
@@ -91,20 +93,21 @@ def number(request):
                     else:
                         code.append(s)
                         s = ""
-                print(code[4])
+
                 spoj_count = obj1.spoj
                 codeforces1 = obj1.codeforces
                 hackerearth1 = obj1.hackerearth
                 github1 = obj1.github
 
                 # User Handles
-                obj = StudentData.objects.get(er_no=query)
+
                 cc_user = obj.codechef
                 spoj_user = obj.spoj
                 cf_user = obj.codeforces
                 he_user = obj.hackerearth
                 github_user = obj.github
 
+                print(cf_user)
                 # Url's Of User's Profile
                 urlcf = "https://codeforces.com/profile/"
                 urlcf += cf_user

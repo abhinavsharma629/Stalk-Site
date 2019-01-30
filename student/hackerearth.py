@@ -12,8 +12,8 @@ def hackerearth(headers, browser, he_user):
 
         user = driver.find_element_by_id("id_login")
         passw = driver.find_element_by_id("id_password")
-        user.send_keys("abhinavsharma629")
-        passw.send_keys("meripehalimohobbat1234@@")
+        user.send_keys("yourusername")
+        passw.send_keys("yourpassword")
         driver.find_element_by_name("signin").click()
 
         # after logging in redirecting to the page needed
