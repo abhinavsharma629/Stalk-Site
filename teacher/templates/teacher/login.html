@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="col-lg-5">
+<form method="POST" action="detail">
+	{% csrf_token %}
+  <div class="form-group">
+    <label for="ID_No.">ID</label>
+    <input name='q' type="text" class="form-control" placeholder="Enter Your Id">
+  </div>
+
+  <div class="form-group">
+    <label for="Password">Password</label>
+    <input  name='q1' type="password" class="form-control" placeholder="Password">
+    <small class="form-text text-muted">We'll never share your password with anyone else.</small>
+  </div>
+  <div class="container">
+  <button type="submit" class="btn btn-primary">Login</button>
+</div>
+</form>
+</div>
+{% endblock %}

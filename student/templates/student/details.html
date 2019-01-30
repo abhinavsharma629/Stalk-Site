@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+	<title>Student Details</title>
+{% endblock %}
+{% block body %}
+<div class ="container">
+	{% for i in match %}
+	{% if i.er_no|length  > 0 %}
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<img class="img-circle avatar avatar-original" style="-webkit-user-select:none; 
+								display:block; margin:auto;" src="http://robohash.org/sitsequiquia.png?size=120x120">
+							</div>
+							<div class="col-md-8">
+								<div class="row">
+									<div class="col-md-12">
+										<h1 class="only-bottom-margin">{{i.name}}</h1>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+
+										<span class="text-muted">Enrollment Number:- </span>{{i.er_no}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">College Name:- </span> {{i.college_name}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Codeforces Username:- </span>{{i.codeforces}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Codechef Username:- </span>{{i.codechef}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Spoj Username:- </span> {{i.spoj}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Hackerrank Username:- </span>{{i.hackerrank}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Hackerearth Username:- </span>{{i.hackerearth}}<br>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="container text-center">
+	<form method="GET" action="search">
+		<div class="container">
+			<button type="submit" class="btn btn-default">Back</button>
+		</div>
+	</form>
+</div>
+{% else %}
+<h1>No Such User</h1>
+{% endif %}
+{% endfor %}
+{% endblock %}

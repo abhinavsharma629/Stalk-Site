@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container text-center">
+	<div class="page-header">
+		<h1>Details</h1>
+	</div>
+	<br>
+</div>
+<div class ="container">
+	{% if user.username|length  > 0 %}
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<img class="img-circle avatar avatar-original" style="-webkit-user-select:none; 
+								display:block; margin:auto;" src="http://robohash.org/sitsequiquia.png?size=120x120">
+							</div>
+							<div class="col-md-8">
+								<div class="row">
+									<div class="col-md-12">
+										<h1 class="only-bottom-margin">Profile</h1>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+
+										<span class="text-muted">Username:- </span>{{user.username}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">First Name:- </span> {{user.first_name}}<br>
+										<span class="text-muted"></span><br>
+										<span class="text-muted">Last Name:- </span>{{user.last_name}}<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="container text-center">
+	<form method='GET' action="">
+		<div class="container">
+			<button formaction='profile/edit' type="submit" class="btn btn-default">Edit</button>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			<h2> Searching </h2>
+			<br>
+			<div class="form-group">
+			<div class=" container text-center col-md-7">
+				<input name='q' type="text" placeholder="Search By College Name" class="form-control"></input>
+			</div>
+			</div>
+
+			<div class="container">
+			<button formaction="profile/all_info" style="margin-right: 16px" type="submit" class="btn btn-default">Search</button>
+			</div>
+			<br>
+			<br>
+			<div class="container">
+			<button formaction="logout" style="margin-right: 16px" type="submit" class="btn btn-default">Logout</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% else %}
+<h1>No Such User</h1>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class ="container text-center">
+	<div class="page-header" >
+		<h1>Problems Solved</h1>
+	</div>
+	<br>
+	<div class="container">
+		<h2><a href="{{urlc}}">CodeChef</a></h2>
+	</div>
+	<div class="container">
+		<h3>Fully Solved Problems:- <b>{{fully}}</b></h3>
+		<h3>Partially Solved Problems:- <b>{{partial}}</b></h3>
+	</div>
+	<br>
+	<div class="container">
+		<h2><a href="{{url2}}">Spoj</a></h2>
+	</div>
+	<div class="container">
+		<h3>Solved:- <b>{{spoj}}</b></h3>
+	</div>
+	<br>
+	<div class="container">
+		<h2><a href="{{urlcf}}">Codeforces</a></h2>
+	</div>
+	<div class="container">
+		<h3>Solved:- <b>{{codeforces}}</b></h3>
+	</div>
+	<br>
+	<div class="container">
+		<h2><a href="{{urlhe}}">HackerEarth</a></h2>
+	</div>
+	<div class="container">
+		<h3>Solved:- <b>{{hackerearth}}</b></h3>
+	</div>
+	<br>
+	<div class="container">
+		<h2><a href="{{urlgit}}">GitHub</a></h2>
+	</div>
+	<div class="container">
+		<h3>Repositories:- <b>{{github}}</b></h3>
+	</div>
+
+	
+		<a href="search"><button class="btn btn-default" type="submit">Back</button></a>
+	</div>
+</div>
+{% endblock %}
